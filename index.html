@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Overcast</title>
+<style id="theme">
+:root {
+ --theme: navy;
+ --theme-light: white;
+ --theme-accent: cornflowerblue;
+ --text: black;
+ --font: Arial, sans-serif
+}
+</style>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div id="cover">
+ <h1>Overcast</h1>
+ <p id="enterName" hidden>
+  <input type="text" id="nameInput" placeholder="Enter your name and join the chat" autofocus="">
+  <button id="join">Join</button>
+ </p>
+ <div id="server" hidden>
+  <p>
+   <input type="text" id="linkInput" placeholder="Enter a server link" autofocus="">
+   <button id="joinServer">Join</button>
+  </p>
+  <p>or</p>
+  <p>
+   <button id="custom">Start a Custom Server</button>
+  </p>
+ </div>
+</div>
+<p id="bar"><select id="theme-select"><option value="navy">Navy</option><option value="silver">Silver</option><option value="royal">Royal</option><option value="midnight">Midnight</option><option value="sun">Sunny Day</option><option value="hacker">Hacker</option></select></p>
+<button hidden id="close">&times;</button>
+<p>Your name is <b id="you-id">loading...</b></p>
+<p id="ip" hidden style="-webkit-user-select: text;"></p>
+<p>Your peers are:</p>
+<ul id="peer-list"></ul>
+<p class="sticky" id="chat-input-row"><input type="text" id="chat-input" placeholder="Enter your message..."><button id="chat-btn">Chat!</button></p>
+<ul id="chat"><li><b>Server</b>: Starting up...</li></ul>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/0.3.9/peer.min.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
