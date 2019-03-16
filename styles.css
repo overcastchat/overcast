@@ -181,3 +181,29 @@ p.small {
  top: 0;
  left: 0;
 }
+
+#people {
+ color: var(--theme-light, white);
+ padding: 14px;
+ float: right;
+}
+
+ul#people-menu {
+ position: fixed;
+ top: 47px;
+ background: var(--theme-accent, cornflowerblue);
+ color: var(--theme, navy);
+ margin: 0;
+ padding: 15px;
+ list-style: none;
+ display: none;
+ border-radius: 0 0 5px 5px;
+}
+
+#people:hover ul#people-menu, #people:focus ul#people-menu {
+ display: block;
+}
+
+#people-menu li {
+ margin-bottom: 14px;
+}

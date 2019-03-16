@@ -47,6 +47,9 @@ var themes = {
   font: "monospace"
  }
 };
+function name2Color(name) {
+return "#" + (parseInt(name, 36).toString(16) + "000000").slice(0, 6);
+}
 // Node section
 function startServer(){
  if(envir === "node"){
@@ -116,9 +119,9 @@ function newPeer(conn) {
    peers[conn.peer] = conn;
    msg("Server","New peer: " + conn.peer);
    var li = document.createElement("LI");
-   li.innerText = conn.peer;
+   li.innerHTML = "<span class='person-letter' style='background-color: " + name2Color(conn.peer) + "'>" + conn.peer[0] + "</span> " + conn.peer;
    li.id = conn.peer;
-   document.getElementById("peer-list").appendChild(li);
+   document.getElementById("people-menu").appendChild(li);
   };
   conn.on('data', function(data) {
    msg(conn.peer,data);
@@ -126,7 +129,7 @@ function newPeer(conn) {
   conn.on("close",function (){
    msg("Server",conn.peer + " was disconnected.");
    peers[conn.peer].close();
-   document.getElementById(conn.peer).innerHTML += " (<b style='color: #ff5500'>Disconnected</b>)";
+   document.getElementById("person-menu").removeChild(document.getElementById(conn.peer));
    peers[conn.peer] = false;
   })
  });

@@ -43,16 +43,15 @@
   <p><button id="submit-server-settings">OK</button></p>
  </div>
 </div>
-<p id="bar">
+<div id="bar">
  <a href="https://overcastchat.github.io/" class="logo"><img src="https://overcastchat.github.io/icon.png" width="45"></a>
  <span id="server-name-bar"></span>
  <select id="theme-select"><option value="navy">Navy</option><option value="silver">Silver</option><option value="royal">Royal</option><option value="midnight">Midnight</option><option value="sun">Sunny Day</option><option value="hacker">Hacker</option></select>
-</p>
+ <div id="people" tabindex="0">People<ul id="people-menu"></ul></div>
+</div>
 <button hidden id="close">&times;</button>
 <p>Your name is <b id="you-id">loading...</b></p>
 <p id="ip" hidden style="-webkit-user-select: text;"></p>
-<p>Your peers are:</p>
-<ul id="peer-list"></ul>
 <p class="sticky" id="chat-input-row"><input type="text" id="chat-input" placeholder="Enter your message..."><button id="chat-btn">Chat!</button></p>
 <ul id="chat"><li><b>Server</b>: Starting up...</li></ul>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/0.3.9/peer.min.js"></script>
