@@ -18,12 +18,11 @@ button:hover {
  left: 0;
  width: calc(100% - 38px);
  margin: 0;
- padding-right: 35px;
+ padding-right: 38px;
 }
 
 #bar select, #bar button, #bar input {
  border: none;
- float: right;
  padding: 15px;
 }
 
@@ -32,11 +31,11 @@ html {
  background: var(--theme, navy);
  -webkit-user-select: none;
  font-family: var(--font, Arial);
- overflow-y: scroll
+ overflow-y: scroll;
 }
 .sticky {
  position: sticky;
- top: 4px;
+ top: 50px;
 }
 button, input, select {
  background: var(--theme, navy);
@@ -118,6 +117,7 @@ div#cover {
  left: 0;
  text-align: center;
  color: var(--theme-light, white);
+ transition: top 1s ease;
 }
 
 input#nameInput {
@@ -131,7 +131,7 @@ input#nameInput {
 }
 
 ::-webkit-scrollbar-track {
- background: var(--theme, navy); 
+ background: var(--theme, navy);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -174,6 +174,7 @@ p.small {
  position: fixed;
  top: 0;
  left: 50px;
+ z-index: -1;
 }
 
 .logo {
@@ -185,7 +186,7 @@ p.small {
 #people {
  color: var(--theme-light, white);
  padding: 14px;
- float: right;
+ display: inline;
 }
 
 ul#people-menu {
@@ -206,4 +207,28 @@ ul#people-menu {
 
 #people-menu li {
  margin-bottom: 14px;
+}
+
+.cover-hide {
+ top: -100%!important;
+}
+
+.cover-hide img {
+ display: none;
+}
+
+.bottom-chat-bar {
+ position: fixed;
+ bottom: 0px;
+ margin: 0;
+ background: var(--theme-accent, cornflowerblue);
+ padding: 5px;
+ left: 0;
+ width: 100%;
+}
+
+#bar-section {
+ float: right;
+ background: var(--theme, navy);
+ z-index: 5;
 }

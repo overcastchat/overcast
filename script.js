@@ -26,7 +26,7 @@ var themes = {
   font: "Arial, sans-serif"
  },
  midnight: {
-  theme: "darkblue",
+  theme: "steelblue",
   light: "black",
   text: "lightsteelblue",
   accent: "darkslateblue",
@@ -201,6 +201,9 @@ window.addEventListener("load",function (){
   alert("Oh nose! Your browser can't run "+ appName + "!");
   return false;
  };
+ setInterval(function (){
+if(scrollY > 50){document.getElementById("chat-input-row").classList.add("bottom-chat-bar")}else{document.getElementById("chat-input-row").classList.remove("bottom-chat-bar")}
+}, 200);
  if(envir !== "browser"){
   document.getElementById("close").removeAttribute("hidden");
   document.getElementById("server").removeAttribute("hidden");
