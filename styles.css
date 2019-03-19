@@ -199,6 +199,7 @@ ul#people-menu {
  list-style: none;
  display: none;
  border-radius: 0 0 5px 5px;
+ min-width: 100px;
 }
 
 #people:hover ul#people-menu, #people:focus ul#people-menu {

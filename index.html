@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html class=""><head>
 <title>Overcast</title>
 <style id="theme">
 :root {
@@ -8,26 +7,26 @@
  --theme-light: white;
  --theme-accent: cornflowerblue;
  --text: black;
- --font: Arial, sans-serif
+ --font: Arial, sans-serif;
 }
-</style>
+ </style>
 <link rel="stylesheet" href="./styles.css">
 <link rel="icon" href="https://overcastchat.github.io/icon.png">
 </head>
 <body>
 <div id="cover">
- <a href="https://overcastchat.github.io/" class="logo"><img src="https://overcastchat.github.io/icon.png" width="100"></a>
+ <a href="https://overcastchat.github.io/" class="logo" tabindex="-1"><img src="https://overcastchat.github.io/icon.png" width="100"></a>
  <h1 id="title">Overcast</h1>
- <p id="enterName" hidden>
-  <input type="text" id="nameInput" placeholder="Enter your name and join the chat" autofocus="">
+ <p id="enterName">
+  <input type="text" id="nameInput" placeholder="Enter your name and join the chat" autofocus="" aria-label="Enter your name">
   <button id="join">Join</button>
  </p>
- <div id="server" hidden>
+ <div id="server" hidden="">
   <p>
-   <input type="text" id="linkInput" placeholder="Enter a server link" autofocus="">
+   <input type="text" id="linkInput" placeholder="Enter a server link" autofocus="" aria-label="Enter a server link">
    <button id="joinServer">Join</button>
   </p>
-  <div id="customServer" hidden>
+  <div id="customServer" hidden="">
    <p>or</p>
    <p>
     <button id="custom">Start a Custom Server</button>
@@ -35,7 +34,7 @@
   </div>
  </div>
 </div>
-<div class="popup" hidden id="settings-popup">
+<div class="popup" hidden="" id="settings-popup" aria-modal="true">
  <div class="popup-content">
   <h3>Server Options</h3>
   <p>Name: <input type="text" id="server-name"></p>
@@ -44,17 +43,17 @@
  </div>
 </div>
 <div id="bar">
- <a href="https://overcastchat.github.io/" class="logo"><img src="https://overcastchat.github.io/icon.png" width="45"></a>
+ <a href="https://overcastchat.github.io/" class="logo" tabindex="-1"><img src="https://overcastchat.github.io/icon.png" width="45"></a>
  <span id="server-name-bar"></span>
- <select id="theme-select"><option value="navy">Navy</option><option value="silver">Silver</option><option value="royal">Royal</option><option value="midnight">Midnight</option><option value="sun">Sunny Day</option><option value="hacker">Hacker</option></select>
- <div id="people" tabindex="0">People<ul id="people-menu"></ul></div>
+ <div id="bar-section"><div id="people" tabindex="3">People<ul id="people-menu"></ul></div><select id="theme-select" tabindex="4" aria-label="Select a theme"><option value="navy">Navy</option><option value="silver">Silver</option><option value="royal">Royal</option><option value="midnight">Midnight</option><option value="sun">Sunny Day</option><option value="hacker">Hacker</option></select></div>
+ 
 </div>
-<button hidden id="close">&times;</button>
+<button hidden="" id="close">×</button>
 <p>Your name is <b id="you-id">loading...</b></p>
-<p id="ip" hidden style="-webkit-user-select: text;"></p>
-<p class="sticky" id="chat-input-row"><input type="text" id="chat-input" placeholder="Enter your message..."><button id="chat-btn">Chat!</button></p>
-<ul id="chat"><li><b>Server</b>: Starting up...</li></ul>
+<p id="ip" hidden="" style="-webkit-user-select: text;"></p>
+<p class="" id="chat-input-row"><input type="text" id="chat-input" placeholder="Enter your message..." tabindex="1" aria-label="Enter your message"><button id="chat-btn" tabindex="2">Chat!</button></p>
+<ul id="chat"><b>Server</b>: Starting up...</li></ul>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/0.3.9/peer.min.js"></script>
 <script src="./script.js"></script>
-</body>
-</html>
+
+</body></html>
